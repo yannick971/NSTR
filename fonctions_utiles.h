@@ -21,7 +21,7 @@ typedef enum
 
 int MachineEnPanne (pid_t numero_machine);
 
-void send(char message[50],pthread thread_id);
+void send(char message[50],pthread_t thread_id);
 
 void erreur (char message[50]);
 
