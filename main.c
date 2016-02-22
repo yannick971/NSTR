@@ -14,9 +14,9 @@ int main (void)
 	int machine[3] = {0};
 	int i=0;
 	
-	dial = pthread_create(&Th_Dialogue, NULL, Th_Dialogue);
-	r_alim = pthread_create(&Th_Robot_alimentation, NULL, Th_Robot_alimentation);
-	r_retrait = pthread_create(&Th_Robot_retrait, NULL, Th_robot_retrait);
+	dial = pthread_create(&Th_Dialogue, NULL, Th_Dialogue,NULL);
+	r_alim = pthread_create(&Th_Robot_alimentation, NULL, Th_Robot_alimentation,NULL);
+	r_retrait = pthread_create(&Th_Robot_retrait, NULL, Th_robot_retrait,NULL);
 	
 	
 	for(i=0;i<3;i++)

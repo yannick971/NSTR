@@ -21,7 +21,7 @@ void Th_Dialogue()
 {
 	pthread_t Th_Piece;
 	int piece;
-	piece = pthread_create(&Th_Piece, NULL,Th_piece);
+	piece = pthread_create(&Th_Piece, NULL,Th_piece,NULL);
 	if(!piece)
 		printf("creation thread piece reussi\n");
 		
