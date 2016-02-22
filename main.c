@@ -11,7 +11,7 @@ int main (void)
 	int dial=0;
 	int r_alim=0;
 	int r_retrait=0;
-	int machine[3] = 0;
+	int machine[3] = {0};
 	int i=0;
 	
 	dial = pthread_create(&Th_Dialogue, NULL, Th_Dialogue);
@@ -42,6 +42,5 @@ int main (void)
 	return 0;
 
 
-	//tu vois mon commentaire??
 
 }
