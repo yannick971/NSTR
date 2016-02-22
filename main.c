@@ -38,5 +38,7 @@ int main (void)
 		
 	if(!r_retrait)
 		printf("Creation thread robot retrait reussi!\n");
+		
+	return 0;
 
 }
