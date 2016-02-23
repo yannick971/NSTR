@@ -13,6 +13,10 @@
 #include <mqueue.h>
 #include "superviseur.h"
 #include "machine.h"
+#include "piece.h"
+#include "Th_robot_alimentation.h"
+#include "robot_retrait.h"
+
 
 
 
