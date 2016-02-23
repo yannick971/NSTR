@@ -43,6 +43,7 @@ void deposer_piece();
 
 pid_t correspondance_machine_code(pid_t code_piece);
 
+pthread_t demande_usinage();
 
 
 #endif
