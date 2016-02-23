@@ -20,11 +20,11 @@
 
 
 
-typedef enum 
+enum etat
 {
 	en_panne,
 	fonctionne
-} etat;
+}
 
 int MachineEnPanne (pid_t numero_machine);
 

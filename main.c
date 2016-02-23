@@ -2,7 +2,7 @@
 
 int main (void)
 {
-	
+
 	pthread_t Th_dialogue;
 	pthread_t Th_Robot_alimentation;
 	pthread_t Th_Robot_retrait;
@@ -23,18 +23,15 @@ int main (void)
 	{
 		
 		machine[i] = pthread_create(&Th_Machine, NULL, Th_Machine,NULL);
-<<<<<<< HEAD
-		machine[i] = pthread_create(&Th_Machine, NULL, Th_machine,NULL);
-=======
 
 		machine[i] = pthread_create(&Th_Machine, NULL, Th_machine,NULL);
 
->>>>>>> 3b1f474b1bd00d2840e056012f48da24e7217f09
+		machine[i] = pthread_create(&Th_Machine, NULL, Th_machine,NULL);
+
 			if(!machine[i])
 				printf("Creation thread machine reussi!\n");
 			else
 				erreur("thread machine non crée\n");
-	
 	}
 	
 	if(!dial)
@@ -47,7 +44,4 @@ int main (void)
 		printf("Creation thread robot retrait reussi!\n");
 		
 	return 0;
-
-
-
 }
