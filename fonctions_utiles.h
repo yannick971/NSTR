@@ -14,7 +14,7 @@
 #include "superviseur.h"
 #include "machine.h"
 #include "piece.h"
-#include "Th_robot_alimentation.h"
+#include "Th_Robot_alimentation.h"
 #include "robot_retrait.h"
 
 
