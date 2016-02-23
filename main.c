@@ -1,6 +1,6 @@
 #include "fonctions_utiles.h"
 
-int main (void)
+int main(void)
 {
 
 	pthread_t Th_dialogue;
@@ -28,6 +28,10 @@ int main (void)
 
 		machine[i] = pthread_create(&Th_Machine, NULL, Th_machine,NULL);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2e77d22b46ecf90e8e02bacad21246586bc89293
 			if(!machine[i])
 				printf("Creation thread machine reussi!\n");
 			else
