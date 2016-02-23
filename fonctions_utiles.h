@@ -33,7 +33,7 @@ void desarmer_timer (time_t timer_id);
 
 void usinage();
 
-void receive ();
+void receive();
 
 void retirer_piece(mqd_t file_message);
 
