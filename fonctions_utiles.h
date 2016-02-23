@@ -11,6 +11,9 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <mqueue.h>
+#include "superviseur.h"
+#include "machine.h"
+
 
 
 typedef enum 

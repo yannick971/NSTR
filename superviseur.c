@@ -17,7 +17,7 @@ typedef list_thread* list;
 
 
 
-void Th_Dialogue()
+void *Th_Dialogue()
 {
 	pthread_t Th_Piece;
 	int piece;

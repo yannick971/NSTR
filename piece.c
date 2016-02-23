@@ -1,6 +1,6 @@
 #include "fonctions_utiles.h"
 
-void Th_piece(int code_piece, int numero_machine)
+void *Th_piece(int code_piece, int numero_machine)
 {
 	pthread_mutex_t mutex_machine[3];
 	pthread_mutex_t mutex_convoyeur;

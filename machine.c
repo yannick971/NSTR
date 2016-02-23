@@ -1,6 +1,6 @@
 #include "fonctions_utiles.h"
 
-void Th_Machine()
+void *Th_Machine()
 {
 	pthread_t x;
 
