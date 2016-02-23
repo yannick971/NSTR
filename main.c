@@ -1,6 +1,6 @@
 #include "fonctions_utiles.h"
 
-int main (void)
+int main(void)
 {
 	
 	pthread_t Th_dialogue;
@@ -23,13 +23,12 @@ int main (void)
 	{
 		
 		machine[i] = pthread_create(&Th_Machine, NULL, Th_Machine,NULL);
-<<<<<<< HEAD
-		machine[i] = pthread_create(&Th_Machine, NULL, Th_machine,NULL);
-=======
 
 		machine[i] = pthread_create(&Th_Machine, NULL, Th_machine,NULL);
 
->>>>>>> 3b1f474b1bd00d2840e056012f48da24e7217f09
+		machine[i] = pthread_create(&Th_Machine, NULL, Th_machine,NULL);
+
+
 			if(!machine[i])
 				printf("Creation thread machine reussi!\n");
 			else
@@ -47,7 +46,4 @@ int main (void)
 		printf("Creation thread robot retrait reussi!\n");
 		
 	return 0;
-
-
-
 }

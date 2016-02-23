@@ -7,7 +7,7 @@
 
 int MachineEnPanne (pthread numero_machine)
 {
-	if 
+	prntf(je sais pas\n");
 }
 
 void erreur (char message[50])
