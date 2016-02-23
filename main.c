@@ -22,7 +22,7 @@ int main (void)
 	for(i=0;i<3;i++)
 	{
 		
-		machine[i] = pthread_create(&Th_Machine, NULL, Th_machine);
+		machine[i] = pthread_create(&Th_Machine, NULL, Th_machine,NULL);
 			if(!machine[i])
 				printf("Creation thread machine reussi!\n");
 			else
