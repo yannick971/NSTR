@@ -24,7 +24,7 @@ enum etat
 {
 	en_panne,
 	fonctionne
-}
+};
 
 int MachineEnPanne (pid_t numero_machine);
 
