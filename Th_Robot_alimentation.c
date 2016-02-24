@@ -1,7 +1,7 @@
 #include "fonctions_utiles.h"
 
 
-void Th_Robot_alimentation ()
+void *Th_Robot_alimentation()
 {
 	int horloge=0;
 	void fnc_evenementielle_timerRA()

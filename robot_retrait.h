@@ -1,6 +1,6 @@
 #ifndef ROBOT_RETRAIT
 
-void Th_robot_retrait();
+void *Th_Robot_retrait();
 
 void fnc_evenementielle_timerRR();
 

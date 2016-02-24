@@ -4,9 +4,9 @@ int main(void)
 {
 	
 	pthread_t Th_dialogue;
-	pthread_t Th_Robot_alimentation;
-	pthread_t Th_Robot_retrait;
-	pthread_t Th_Machine;
+	pthread_t Th_robot_alimentation;
+	pthread_t Th_robot_retrait;
+	pthread_t Th_machine;
 	
 	int dial=0;
 	int r_alim=0;
@@ -15,18 +15,14 @@ int main(void)
 	int i=0;
 	
 	dial = pthread_create(&Th_dialogue, NULL, Th_Dialogue ,NULL);
-	r_alim = pthread_create(&Th_Robot_alimentation, NULL, Th_Robot_alimentation,NULL);
-	r_retrait = pthread_create(&Th_Robot_retrait, NULL, Th_Robot_retrait,NULL);
+	r_alim = pthread_create(&Th_robot_alimentation, NULL, Th_Robot_alimentation,NULL);
+	r_retrait = pthread_create(&Th_robot_retrait, NULL, Th_Robot_retrait,NULL);
 	
 	
 	for(i=0;i<3;i++)
 	{
 		
-		machine[i] = pthread_create(&Th_Machine, NULL, Th_Machine,NULL);
-
-		machine[i] = pthread_create(&Th_Machine, NULL, Th_machine,NULL);
-
-		machine[i] = pthread_create(&Th_Machine, NULL, Th_machine,NULL);
+		machine[i] = pthread_create(&Th_machine, NULL, Th_Machine,NULL);
 
 
 			if(!machine[i])
