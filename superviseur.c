@@ -33,6 +33,7 @@ void *Th_Dialogue()
 	
 	void fonc_evenementielle_USER1 (list l)
 	{
+<<<<<<< HEAD
 		pthread x;
 		while( l != NULL)
 		{
@@ -52,5 +53,28 @@ void *Th_Dialogue()
 	 	Saire_ordre_operateur(code_piece);
 	 	Numero_machine = corresponce_machine_code(Th_Piece);
  	}
+=======
+		x= l;
+		pthread_sigkill(SIGKILL,x);
+		erreur("fin anormale du systeme\n");
+		
+		
+}
+
+void fnc_evenementielle_SIGUSER2(list l)
+{
+	RemoveFromListe(Liste_ThreadPiece, Sender);
+}
+ while(1)
+ {
+	 Saire_ordre_operateur(code_piece);
+	 Numero_machine = corresponce_machine_code(code_piece);
+	 
+ }
+ 	
+>>>>>>> a70dc5ae288145a0939efa89e63d88f31e84e124
 	
+}
+if(pthread_join(Th_Piece,NULL))
+		perror("pthread_join\n");
 }
