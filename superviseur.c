@@ -49,5 +49,9 @@ void fnc_evenementielle_SIGUSER2(list l)
 	 Numero_machine = corresponce_machine_code(code_piece);
 	 
  }
+ 	
 	
+}
+if(pthread_join(Th_Piece,NULL))
+		perror("pthread_join\n");
 }

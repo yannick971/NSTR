@@ -40,5 +40,12 @@ int main(void)
 	if(!r_retrait)
 		printf("Creation thread robot retrait reussi!\n");
 		
+	if(pthread_join(Th_dialogue,NULL))
+		perror("join dialogue\n");
+	if(pthread_join(Th_robot_alimentation,NULL))
+		perror("join robot alim\n");
+	if(pthread_join(Th_robot_retrait,NULL))
+		perror("join robot retrait\n");
+		
 	return 0;
 }

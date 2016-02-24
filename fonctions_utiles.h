@@ -3,7 +3,6 @@
 #include <pthread.h>
 #include <semaphore.h>
 #include <signal.h>
-#include "predicat_liste.h"
 #include <sys/errno.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,6 +10,8 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <mqueue.h>
+
+#include "predicat_liste.h"
 #include "superviseur.h"
 #include "machine.h"
 #include "piece.h"
@@ -24,7 +25,7 @@ enum etat
 {
 	en_panne,
 	fonctionne
-}
+};
 
 int MachineEnPanne (pid_t numero_machine);
 
