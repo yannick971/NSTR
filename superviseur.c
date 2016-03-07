@@ -9,7 +9,7 @@ pthread_mutex_t Mutex1 = 1;
 typedef struct list_thread list_thread
 struct list_thread
 {
-	pthread t;
+	pthread_t t;
 	struct list_thread *next;
 
 };
