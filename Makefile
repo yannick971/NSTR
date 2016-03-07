@@ -6,7 +6,7 @@ EXEC=main
 all: $(EXEC)
 
 main: main.o machine.o piece.o robot_retrait.o superviseur.o Th_Robot_alimentation.o
-	$(CC) -o main main.o machine.o piece.o robot_retrait.o superviseur.o Th_Robot_alimentation.o $(LDFLAGS)
+	$(CC) -o main main.o machine.o piece.o robot_retrait.o superviseur.o Th_Robot_alimentation.o $(CFLAGS)
 	
 	
 	
