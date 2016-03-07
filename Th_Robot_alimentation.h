@@ -1,4 +1,5 @@
 #ifndef Th_ROBOT_ALIMENTATION
+#define Th_ROBOT_ALIMENTATION
 
 
 void *Th_Robot_alimentation ();

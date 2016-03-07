@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-W -Wall -ansi -pedantic -pthread -lrt -lthread
+CFLAGS=-W -Wall -ansi -pedantic -lpthread -lrt
 LDFLAGS=
 EXEC=main
 
@@ -14,7 +14,7 @@ main.o: main.c predicat_liste.h fonctions_utiles.h superviseur.h machine.h piece
 	$(CC) -o main.o -c main.c $(CFLAGS)
 	
 fonctions_utiles.o: fonctions_utiles.c fonctions_utiles.h
-	$(CC) -o foctions_utiles.o -c fonctions_utiles.c $(CFLAGS)
+	$(CC) -o fonctions_utiles.o -c fonctions_utiles.c $(CFLAGS)
 
 machine.o: machine.c machine.h
 	$(CC) -o machine.o -c machine.c $(CFLAGS)

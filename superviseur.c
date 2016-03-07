@@ -6,7 +6,7 @@ pthread_mutex_t MutexMachine[nbMachine]=1;
 pthread_mutex_t Mutex1 = 1;
 
 
-typedef struct list_thread list_thread
+//typedef struct list_thread list_thread
 
 typedef struct list_thread
 {

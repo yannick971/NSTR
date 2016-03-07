@@ -1,4 +1,5 @@
 #ifndef PREDICAT_LISTE
+#define PREDICAT_LISTE
 
 typedef struct list_thread list_thread;
 struct list_thread

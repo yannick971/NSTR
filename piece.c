@@ -11,7 +11,7 @@ void *Th_piece(pthread_t code_piece, pthread_t numero_machine)
 
 	char *message;
 
-	send("deposer piece brute sur convoyeur\n", Th_robot_alimentation);
+	send("deposer piece brute sur convoyeur\n", Th_Robot_alimentation);
 
 	if((message == NULL) || message == "defaillance")
 	{
@@ -39,7 +39,7 @@ void *Th_piece(pthread_t code_piece, pthread_t numero_machine)
 	if(message == NULL)
 	{
 		mutex_lock(Mutex1);
-		Machine_en_panne[1]= true;
+		Machine_en_panne[1]= 1;
 		mutex_unlock(Mutex1);
 		pthread_kill(Th_dialogue, SIGUSR2);
 		erreur("La machine n'a pas fini son operation d'usinage après 10 minutes\n");
@@ -47,7 +47,7 @@ void *Th_piece(pthread_t code_piece, pthread_t numero_machine)
 
 	/* le thread a reçu fin usinage */
 	mutex_lock(mutex_convoyeur);
-	send("deposer piece usinee sur convoyeur",Th_machine[]);
+	send("deposer piece usinee sur convoyeur",Th_machine[1]);
 	timed_received(message, sec);
 
 	if(message == NULL)
@@ -73,7 +73,7 @@ void *Th_piece(pthread_t code_piece, pthread_t numero_machine)
 		mutex_unlock(mutex_convoyeur);
 		mutex_unlock(mutex_machine[]);
 		pthread_kill(Th_dialogue, SIGUSER2);
-		printf("usinage de la piece, code piece: %d : OK\n",code_piece); /* manque code piece*/
+		printf("usinage de la piece, code piece: %d : OK\n", code_piece); /* manque code piece*/
 	}
 }
 

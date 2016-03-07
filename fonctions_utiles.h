@@ -1,4 +1,5 @@
 #ifndef FONCTIONS_UTILES
+#define FONCTIONS_UTILES
 
 #include <pthread.h>
 #include <semaphore.h>
@@ -49,7 +50,7 @@ void retirer_piece_du_convoyeur(mqd_t file_message);
 
 void deposer_piece();
 
-pid_t correspondance_machine_code(pid_t code_piece);
+int correspondance_machine_code(pid_t code_piece);
 
 pthread_t demande_usinage();
 
