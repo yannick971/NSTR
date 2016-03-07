@@ -1,6 +1,6 @@
 #include "fonctions_utiles.h"
 
-int nbMachine = 3;
+
 bool MachineEnPanne[nbMachine] = false;
 pthread_mutex_t MutexMachine[nbMachine]=1;
 pthread_mutex_t Mutex1 = 1;
@@ -8,23 +8,23 @@ pthread_mutex_t Mutex1 = 1;
 
 typedef struct list_thread list_thread
 
-struct list_thread
+typedef struct list_thread
 {
 	pthread_t t;
 	struct list_thread *next;
 
-};
-typedef list_thread* list;
+}
+ list;
 
 
 
 void *Th_Dialogue()
 {
 	pthread_t Th_Piece;
-	pthread_t Numero_machine;
+	pthread_t Numero_machine = Th_machine[2];
 	int piece;
 	
-	piece = pthread_create(&Th_Piece, NULL,Th_piece,NULL);
+	piece = pthread_create(&Th_Piece, NULL,Th_piece(Th_Piece,Numero_machine),NULL);
 	
 	if(!piece)
 		printf("creation thread piece reussi\n");

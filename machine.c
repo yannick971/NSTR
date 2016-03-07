@@ -4,6 +4,7 @@ void *Th_Machine()
 {
 	pthread_t Sender;
 	mqd_t file_message;
+	pthread_t x;
 
 
 	while(1)

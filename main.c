@@ -1,12 +1,27 @@
 #include "fonctions_utiles.h"
 
+#define nbMachine  3
+
+pthread_t Th_dialogue;
+pthread_t Th_robot_alimentation;
+pthread_t Th_robot_retrait;
+pthread_t Th_machine[nbMachine];
+	
+
+
 int main(void)
 {
+	
 
-	pthread_t Th_dialogue;
-	pthread_t Th_robot_alimentation;
-	pthread_t Th_robot_retrait;
-	pthread_t Th_machine;
+	/*typedef struct 
+	{
+		pthread_t Th_dialogue;
+		pthread_t Th_robot_alimentation;
+		pthread_t Th_robot_retrait;
+		pthread_t Th_machine[nbMachine];
+
+	}
+	infothread;*/
 	
 	int dial=0;
 	int r_alim=0;
@@ -23,7 +38,7 @@ int main(void)
 	{
 		
 
-		machine[i] = pthread_create(&Th_machine, NULL, Th_Machine,NULL);
+		machine[i] = pthread_create(&Th_machine[i], NULL, Th_Machine,NULL);
 
 			if(!machine[i])
 				printf("Creation thread machine reussi!\n");
