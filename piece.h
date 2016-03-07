@@ -1,5 +1,5 @@
 #ifndef PIECE
 
-void *Th_piece(int code_piece, int numero_machine);
+void *Th_piece(pthread_t code_piece, pthread_t numero_machine);
 
 #endif

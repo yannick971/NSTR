@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-W -Wall -ansi -pedantic -pthread -lrt
+CFLAGS=-W -Wall -ansi -pedantic -pthread -lrt -lthread
 LDFLAGS=
 EXEC=main
 
