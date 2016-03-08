@@ -1,4 +1,10 @@
 #include "fonctions_utiles.h"
+#include "superviseur.h"
+#include "Th_Robot_alimentation.h"
+#include "robot_retrait.h"
+#include "machine.h"
+#include "predicat_liste.h"
+
 
 #define nbMachine  3
 
@@ -6,6 +12,7 @@ pthread_t Th_dialogue;
 pthread_t Th_robot_alimentation;
 pthread_t Th_robot_retrait;
 pthread_t Th_machine[nbMachine];
+
 	
 
 

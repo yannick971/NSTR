@@ -1,6 +1,16 @@
 #include "fonctions_utiles.h"
 #include "Th_Robot_alimentation.h"
 
+#include <pthread.h>
+#include <semaphore.h>
+#include <signal.h>
+#include <sys/errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <mqueue.h>
 void *Th_Robot_alimentation()
 {
 	int horloge=0;

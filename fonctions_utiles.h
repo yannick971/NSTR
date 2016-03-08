@@ -1,6 +1,8 @@
 #ifndef FONCTIONS_UTILES
 #define FONCTIONS_UTILES
 
+
+/*#include <stdint.h>*/
 #include <pthread.h>
 #include <semaphore.h>
 #include <signal.h>
@@ -11,8 +13,6 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <mqueue.h>
-
-
 
 enum etat
 {
