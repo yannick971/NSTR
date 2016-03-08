@@ -6,7 +6,7 @@ void *Th_piece(pthread_t code_piece, pthread_t numero_machine)
 {
 	pthread_mutex_t mutex_machine = PTHREAD_MUTEX_INITIALIZER;
 	pthread_mutex_t mutex_convoyeur = PTHREAD_MUTEX_INITIALIZER;
-
+	
 
 	pthread_mutex_lock(&mutex_machine);
 	pthread_mutex_lock(&mutex_convoyeur);
@@ -42,7 +42,7 @@ void *Th_piece(pthread_t code_piece, pthread_t numero_machine)
 	if(message == NULL)
 	{
 		pthread_mutex_lock(&Mutex1);
-		Machine_en_panne[1]= 1;
+		Machine_etat= fonctionne;
 		pthread_mutex_unlock(&Mutex1);
 		pthread_kill(Th_dialogue, SIGUSR2);
 		erreur("La machine n'a pas fini son operation d'usinage après 10 minutes\n");
@@ -55,7 +55,7 @@ void *Th_piece(pthread_t code_piece, pthread_t numero_machine)
 
 	if(message == NULL)
 	{
-		pthread_kill(&Th_dialogue, SIGUSR1);
+		pthread_kill(Th_dialogue, SIGUSR1);
 		erreur("arret du systeme de supervision, la machine n'a pas fini de retirer la piece au bout de 50sec\n"); /*donner num machine*/
 	}
 	else

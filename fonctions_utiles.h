@@ -20,13 +20,15 @@ enum etat
 	en_panne,
 	fonctionne
 };
+enum etat Machine_etat;
 
-extern pthread_mutex_t MutexMachine[nbMachine];
+
+extern pthread_mutex_t MutexMachine[3];
 extern pthread_mutex_t Mutex1;
 extern pthread_t Th_dialogue;
 extern pthread_t Th_robot_alimentation;
 extern pthread_t Th_robot_retrait;
-extern pthread_t Th_machine[nbMachine];
+extern pthread_t Th_machine[3];
 
 int MachineEnPanne (pid_t numero_machine);
 
