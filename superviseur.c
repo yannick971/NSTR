@@ -1,4 +1,5 @@
 #include "fonctions_utiles.h"
+#include "superviseur.h"
 
 
 bool MachineEnPanne[nbMachine] = false;
@@ -6,7 +7,7 @@ pthread_mutex_t MutexMachine[nbMachine]=1;
 pthread_mutex_t Mutex1 = 1;
 
 
-//typedef struct list_thread list_thread
+/*typedef struct list_thread list_thread
 
 typedef struct list_thread
 {
@@ -16,7 +17,7 @@ typedef struct list_thread
 }
  list;
 
-
+*/
 
 void *Th_Dialogue()
 {
@@ -50,7 +51,7 @@ void *Th_Dialogue()
 
  	while(1)
  	{
-	 	Saire_ordre_operateur(code_piece);
+	 	Saisir_ordre_operateur(code_piece);
 	 	Numero_machine = corresponce_machine_code(Th_Piece);
  	}
 
@@ -59,7 +60,7 @@ void *Th_Dialogue()
 		erreur("fin anormale du systeme\n");
 		
 		
-}
+
 
 void fnc_evenementielle_SIGUSER2(list l)
 {
@@ -68,11 +69,12 @@ void fnc_evenementielle_SIGUSER2(list l)
 
 while(1)
 {
-	 Saire_ordre_operateur(code_piece);
+	 Saisir_ordre_operateur(code_piece);
 	 Numero_machine = corresponce_machine_code(code_piece);
 	 
 }
  		
 if(pthread_join(Th_Piece,NULL))
 		perror("pthread_join\n");
+
 }

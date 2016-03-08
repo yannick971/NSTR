@@ -12,14 +12,6 @@
 #include <unistd.h>
 #include <mqueue.h>
 
-#include "predicat_liste.h"
-#include "superviseur.h"
-#include "machine.h"
-#include "piece.h"
-#include "Th_Robot_alimentation.h"
-#include "robot_retrait.h"
-
-
 
 
 enum etat

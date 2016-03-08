@@ -10,19 +10,7 @@ pthread_t Th_machine[nbMachine];
 
 
 int main(void)
-{
-	
-
-	/*typedef struct 
-	{
-		pthread_t Th_dialogue;
-		pthread_t Th_robot_alimentation;
-		pthread_t Th_robot_retrait;
-		pthread_t Th_machine[nbMachine];
-
-	}
-	infothread;*/
-	
+{		
 	int dial=0;
 	int r_alim=0;
 	int r_retrait=0;

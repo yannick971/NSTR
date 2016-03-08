@@ -1,4 +1,5 @@
 #include "fonctions_utiles.h"
+#include "machine.h"
 
 void *Th_Machine()
 {

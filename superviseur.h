@@ -1,5 +1,5 @@
 #ifndef SUPERVISEUR
-#define ROBOT_RETRAIT
+#define SUPERVISEUR
 
 void *Th_Dialogue();
 void fonc_evenementielle_USER1 (list l);

@@ -5,7 +5,7 @@
 /*********************************************************************/
 
 
-int MachineEnPanne (pthread numero_machine)
+int MachineEnPanne (pthread_t numero_machine)
 {
 	printf("je sais pas\n");
 }
@@ -130,15 +130,15 @@ void retirer_piece_du_convoyeur(mqd_t file_message)
 
 int correspondance_machine_code (pid_t code_piece)
 {
-
+	exit(0);
 }
 
-void send (char message[50],pthread thread_id)
+void send (char message[50],pthread_t thread_id)
 {
-
+	exit(0);
 }
 
 void receive()
 {
-
+	exit(0);
 }

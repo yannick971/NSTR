@@ -15,7 +15,7 @@ list supprimerElementEnTete(list liste)
 
 list ajouterEnTete(list liste, pthread_t val)
 {
-	pthread_t* nouvelElement = malloc(sizeof(pthread));
+	pthread_t* nouvelElement = malloc(sizeof(pthread_t));
 	nouvelElement-> t = val;
 	nouvelElement-> next =liste;
 	return nouvelElement;
@@ -23,7 +23,7 @@ list ajouterEnTete(list liste, pthread_t val)
 
 list ajouter_en_queue(list liste,pthread_t val)
 {
-	pthread_t* nouvelElement = malloc(sizeof(pthread));
+	pthread_t* nouvelElement = malloc(sizeof(pthread_t));
 	if(!nouvelElement) exit(EXIT_FAILURE);
 	
 	if(liste == NULL)

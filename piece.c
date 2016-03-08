@@ -10,6 +10,7 @@ void *Th_piece(pthread_t code_piece, pthread_t numero_machine)
 	mutex_lock(mutex_convoyeur);
 
 	char *message;
+	message= malloc(sizeof(char));
 
 	send("deposer piece brute sur convoyeur\n", Th_Robot_alimentation);
 
@@ -21,7 +22,7 @@ void *Th_piece(pthread_t code_piece, pthread_t numero_machine)
 	}
 	else /* thread a reçu fin depot piece brute sur convoyeur */
 	{
-		send("deposer piece brute sur table\n",Th_machine[]);
+		send("deposer piece brute sur table\n",Th_machine[1]);
 		time_receive(message,sec);
 	}
 	if (message == NULL)
@@ -34,7 +35,7 @@ void *Th_piece(pthread_t code_piece, pthread_t numero_machine)
 	/*le thread a reçu fin depot piece brute sur table */
 
 	mutex_unlock(mutex_convoyeur);
-	time_received(message,sec);
+	/*time_received(message,sec);*/
 
 	if(message == NULL)
 	{
@@ -53,7 +54,7 @@ void *Th_piece(pthread_t code_piece, pthread_t numero_machine)
 	if(message == NULL)
 	{
 		pthread_kill(Th_dialogue, SIGUSR1);
-		erreur("arret du systeme de supervision, la machine n'a pas fini de retirer la piece au bout de 50sec\n"); //donner num machine
+		erreur("arret du systeme de supervision, la machine n'a pas fini de retirer la piece au bout de 50sec\n"); /*donner num machine*/
 	}
 	else
 	{
@@ -71,15 +72,11 @@ void *Th_piece(pthread_t code_piece, pthread_t numero_machine)
 	else
 	{
 		mutex_unlock(mutex_convoyeur);
-		mutex_unlock(mutex_machine[]);
+		mutex_unlock(mutex_machine[1]);
 		pthread_kill(Th_dialogue, SIGUSER2);
-		printf("usinage de la piece, code piece: %d : OK\n", code_piece); /* manque code piece*/
+		printf("usinage de la piece, code piece: OK\n"); /* manque code piece*/
 	}
+	
+	return 0;
+	
 }
-
-
-
-
-
-
-
