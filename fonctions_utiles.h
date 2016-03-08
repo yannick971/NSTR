@@ -13,12 +13,20 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <mqueue.h>
+#include <string.h>
 
 enum etat
 {
 	en_panne,
 	fonctionne
 };
+
+extern pthread_mutex_t MutexMachine[nbMachine];
+extern pthread_mutex_t Mutex1;
+extern pthread_t Th_dialogue;
+extern pthread_t Th_robot_alimentation;
+extern pthread_t Th_robot_retrait;
+extern pthread_t Th_machine[nbMachine];
 
 int MachineEnPanne (pid_t numero_machine);
 

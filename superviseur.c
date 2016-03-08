@@ -3,19 +3,6 @@
 
 
 bool MachineEnPanne[nbMachine] = false;
-pthread_mutex_t MutexMachine[nbMachine]=1;
-pthread_mutex_t Mutex1 = 1;
-
-
-typedef struct list_thread list_thread
-
-typedef struct list_thread
-{
-	pthread_t t;
-	struct list_thread *next;
-
-}
- list;
 
 void *Th_Dialogue()
 {

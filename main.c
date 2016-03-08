@@ -8,12 +8,6 @@
 
 #define nbMachine  3
 
-pthread_t Th_dialogue;
-pthread_t Th_robot_alimentation;
-pthread_t Th_robot_retrait;
-pthread_t Th_machine[nbMachine];
-
-	
 
 
 int main(void)

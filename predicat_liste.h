@@ -12,6 +12,7 @@ struct list_thread
 };
 typedef list_thread* list;
 
+
 list supprimerElementEnTete(list liste);
 list ajouterEnTete(list liste, pthread_t val);
 list ajouter_en_queue(list liste,pthread_t val);
