@@ -22,7 +22,7 @@ typedef struct list_thread
 void *Th_Dialogue()
 {
 	pthread_t Th_Piece;
-	pthread_t Numero_machine = Th_machine[2];
+	pthread_t Numero_machine = Th_machine[1];
 	int piece;
 	
 	piece = pthread_create(&Th_Piece, NULL,Th_piece(Th_Piece,Numero_machine),NULL);
