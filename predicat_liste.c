@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 #include "predicat_liste.h"
+=======
+#include "fonctions_utiles.h"
+#include "predicat_liste.h"
+
+>>>>>>> f4175b03b31f574394bcbcee425d45be0a68c0f4
 
 
 list supprimerElementEnTete(list liste)

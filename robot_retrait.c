@@ -1,6 +1,8 @@
 #include "fonctions_utiles.h"
 #include "robot_retrait.h"
 
+
+
 void *Th_Robot_retrait()
 {
 	void fnc_evenementielle_timerRR()

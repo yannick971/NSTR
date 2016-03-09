@@ -1,6 +1,8 @@
 #ifndef FONCTIONS_UTILES
 #define FONCTIONS_UTILES
 
+
+/*#include <stdint.h>*/
 #include <pthread.h>
 #include <semaphore.h>
 #include <signal.h>
@@ -11,14 +13,22 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <mqueue.h>
-
-
+#include <string.h>
 
 enum etat
 {
 	en_panne,
 	fonctionne
 };
+enum etat Machine_etat;
+
+
+extern pthread_mutex_t MutexMachine[3];
+extern pthread_mutex_t Mutex1;
+extern pthread_t Th_dialogue;
+extern pthread_t Th_robot_alimentation;
+extern pthread_t Th_robot_retrait;
+extern pthread_t Th_machine[3];
 
 int MachineEnPanne (pid_t numero_machine);
 

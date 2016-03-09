@@ -1,7 +1,7 @@
 #ifndef PREDICAT_LISTE
 #define PREDICAT_LISTE
 
-#include "predicat_liste.h"
+
 
 typedef struct list_thread list_thread;
 struct list_thread
@@ -11,6 +11,7 @@ struct list_thread
 
 };
 typedef list_thread* list;
+
 
 list supprimerElementEnTete(list liste);
 list ajouterEnTete(list liste, pthread_t val);
