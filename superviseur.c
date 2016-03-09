@@ -9,9 +9,16 @@ list l;
 void *Th_Dialogue()
 {
 	pthread_t Th_Piece;
+<<<<<<< HEAD
 	pthread_t code_piece;
 	pthread_t Numero_machine = Th_machine[2];
 	int piece = pthread_create(&Th_Piece, NULL,Th_piece(code_piece,Numero_machine),NULL);
+=======
+	pthread_t Numero_machine = Th_machine[1];
+	int piece;
+	
+	piece = pthread_create(&Th_Piece, NULL,Th_piece(Th_Piece,Numero_machine),NULL);
+>>>>>>> 9d0391efc798bc6cb8961e9fd6a7fd0aa4d01a12
 	
 	if(!piece)
 		printf("creation thread piece reussi\n");
