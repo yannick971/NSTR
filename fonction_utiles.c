@@ -11,6 +11,7 @@ int MachineEnPanne (pthread_t numero_machine)
 	printf("je sais pas\n");
 }
 
+
 void erreur (char message[50])
 {
 	fprintf(stderr, "%s\n",message[0]);

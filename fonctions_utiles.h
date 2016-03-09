@@ -2,7 +2,7 @@
 #define FONCTIONS_UTILES
 
 
-/*#include <stdint.h>*/
+
 #include <pthread.h>
 #include <semaphore.h>
 #include <signal.h>

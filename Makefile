@@ -26,7 +26,7 @@ robot_retrait.o: robot_retrait.c robot_retrait.h
 superviseur.o: superviseur.c superviseur.h
 	$(CC) -o superviseur.o -c superviseur.c $(CFLAGS)
 
-Th_Robot_alimentation.o: Th_Robot_alimentation.c Th_Robot_alimantation.h
+Th_Robot_alimentation.o: Th_Robot_alimentation.c Th_Robot_alimentation.h
 	$(CC) -o Th_Robot_alimentation.o -c Th_Robot_alimentation.c $(CFLAGS)
 	
 	

@@ -25,7 +25,7 @@ void *Th_piece(pthread_t code_piece, pthread_t numero_machine)
 	else /* thread a reçu fin depot piece brute sur convoyeur */
 	{
 		send("deposer piece brute sur table\n",Th_machine[1]);
-		receive(message,sec);
+		receive(); /*paramettre message,sec */
 	}
 	if (message == NULL)
 	{
@@ -37,7 +37,7 @@ void *Th_piece(pthread_t code_piece, pthread_t numero_machine)
 	/*le thread a reçu fin depot piece brute sur table */
 
 	pthread_mutex_unlock(&mutex_convoyeur);
-	/*time_received(message,sec);*/
+	receive();/*paramettre message,sec */
 
 	if(message == NULL)
 	{
@@ -51,7 +51,7 @@ void *Th_piece(pthread_t code_piece, pthread_t numero_machine)
 	/* le thread a reçu fin usinage */
 	pthread_mutex_lock(&mutex_convoyeur);
 	send("deposer piece usinee sur convoyeur",Th_machine[1]);
-	received(message, sec);
+	receive(); /*paramettre message,sec */
 
 	if(message == NULL)
 	{
@@ -61,7 +61,7 @@ void *Th_piece(pthread_t code_piece, pthread_t numero_machine)
 	else
 	{
 		send("retirer piece usinee du convoyeur", Th_robot_retrait);
-		timed_received(message,sec);
+		receive(); /*paramettre message,sec */
 	}
 
 	if(message == NULL)
